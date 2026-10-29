@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#1f130e">
+<title>サッポロビール博物館｜赤レンガに刻まれた、ビールの開拓史</title>
+<meta name="description" content="開拓使麦酒醸造所に始まるサッポロビールの歴史を、1890年建設の赤レンガ建築で学ぶ。日本初のビール専門博物館（札幌市東区）。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --stout:#1f130e;
+  --stout-2:#2b1b14;
+  --brick:#8e2f25;
+  --brick-d:#6f231b;
+  --brass:#c4a05a;
+  --brass-l:#dcc58f;
+  --paper:#e6dfd0;
+  --paper-2:#d9d0bd;
+  --ink:#2a1b14;
+  --ink-soft:#5b4a3f;
+  --line-d:rgba(196,160,90,.35);
+  --line-l:rgba(42,27,20,.22);
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.9;
+  color:var(--ink);
+  background:var(--stout);
+  padding-left:env(safe-area-inset-left,0px);
+  padding-right:env(safe-area-inset-right,0px);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+
+.wrap{width:100%;max-width:960px;margin:0 auto;padding:0 22px}
+.serif{font-family:var(--serif)}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;
+  min-height:100svh;
+  min-height:100vh;
+  display:flex;align-items:flex-end;
+  color:#f4ead6;
+  background:var(--stout-2);
+  overflow:hidden;
+  isolation:isolate;
+}
+@supports (height:100svh){.hero{min-height:100svh}}
+.hero img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;z-index:-2;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg,rgba(31,19,14,.55) 0%,rgba(31,19,14,.05) 32%,rgba(31,19,14,.55) 62%,rgba(31,19,14,.96) 100%);
+}
+.hero-in{
+  width:100%;max-width:960px;margin:0 auto;
+  padding:120px 22px calc(56px + env(safe-area-inset-bottom,0px));
+}
+.hero-kicker{
+  font-family:var(--serif);font-weight:500;
+  font-size:14px;letter-spacing:.18em;color:var(--brass-l);
+  margin:0 0 18px;display:flex;align-items:center;gap:12px;
+}
+.hero-kicker::before{content:"";width:34px;height:1px;background:var(--brass)}
+.hero h1{
+  font-family:var(--serif);font-weight:800;
+  font-size:clamp(34px,9.6vw,68px);
+  line-height:1.25;letter-spacing:.04em;margin:0 0 20px;
+  text-shadow:0 2px 24px rgba(0,0,0,.45);
+}
+.hero h1 span{display:block}
+.hero-lead{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(16px,4.3vw,20px);line-height:2;letter-spacing:.06em;
+  margin:0 0 30px;max-width:30em;color:#eadfc8;
+}
+.hero-lead span{display:inline-block}
+.hero-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 10px}
+.hero-tags li{
+  font-size:13px;letter-spacing:.06em;line-height:1;
+  padding:9px 13px;border:1px solid var(--line-d);color:var(--brass-l);
+  background:rgba(31,19,14,.45);
+}
+.hero-in > *{animation:rise .9s ease both}
+.hero-in > *:nth-child(2){animation-delay:.12s}
+.hero-in > *:nth-child(3){animation-delay:.24s}
+.hero-in > *:nth-child(4){animation-delay:.36s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ---------- Section base ---------- */
+section{position:relative}
+.sec{padding:84px 0}
+.sec-paper{background:var(--paper);color:var(--ink)}
+.sec-dark{background:var(--stout);color:#eadfc8}
+.sec-dark2{background:var(--stout-2);color:#eadfc8}
+
+.h2{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(26px,7vw,40px);line-height:1.5;letter-spacing:.05em;
+  margin:0 0 28px;
+}
+.sec-paper .h2{color:var(--brick-d)}
+.sec-dark .h2,.sec-dark2 .h2{color:var(--brass-l)}
+.rule{
+  display:flex;align-items:center;gap:14px;margin:0 0 30px;
+}
+.rule i{flex:1;height:1px;background:var(--line-d)}
+.sec-dark .rule b,.sec-dark2 .rule b{background:var(--brass)}
+.sec-paper .rule i{background:var(--line-l)}
+.rule b{
+  width:14px;height:14px;background:var(--brick);
+  clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+}
+p{margin:0 0 1.2em}
+.lead{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(18px,4.8vw,22px);line-height:2.05;letter-spacing:.04em;
+}
+
+/* ---------- Intro / strengths ---------- */
+.points{margin:44px 0 0;padding:0;list-style:none;border-top:1px solid var(--line-l)}
+.points li{padding:26px 0;border-bottom:1px solid var(--line-l)}
+.points h3{
+  font-family:var(--serif);font-weight:700;font-size:20px;line-height:1.6;letter-spacing:.04em;
+  margin:0 0 8px;color:var(--brick-d);
+}
+.points p{margin:0;font-size:16px;color:var(--ink-soft)}
+
+/* ---------- Figures ---------- */
+.fig{margin:0;background:var(--stout-2)}
+.fig img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:#3a261c}
+.fig figcaption{
+  font-family:var(--serif);font-size:14px;letter-spacing:.08em;line-height:1.8;
+  color:var(--brass-l);padding:14px 22px 0;max-width:960px;margin:0 auto;
+}
+.fig-band{background:var(--stout);padding-bottom:0}
+.fig-band .frame{max-width:960px;margin:0 auto}
+.fig-band .frame img{aspect-ratio:4/5}
+
+/* ---------- Timeline ---------- */
+.tl{list-style:none;margin:40px 0 0;padding:0 0 0 26px;position:relative}
+.tl::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--brass)}
+.tl li{position:relative;padding:0 0 34px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{
+  content:"";position:absolute;left:-26px;top:.8em;width:11px;height:11px;background:var(--brick);
+  border:2px solid var(--brass);border-radius:50%;
+}
+.tl .yr{
+  font-family:var(--serif);font-weight:800;font-size:28px;line-height:1.4;color:var(--brass-l);letter-spacing:.04em;display:block;
+}
+.tl .tx{margin:0;font-size:16px;color:#d9cdb5}
+
+/* ---------- Highlights ---------- */
+.hl{margin:0;padding:0;list-style:none}
+.hl li{padding:22px 0;border-top:1px solid var(--line-d)}
+.hl li:last-child{border-bottom:1px solid var(--line-d)}
+.hl h3{font-family:var(--serif);font-weight:700;font-size:20px;line-height:1.6;margin:0 0 6px;color:var(--brass-l);letter-spacing:.04em}
+.hl p{margin:0;color:#d9cdb5}
+
+/* ---------- Reviews ---------- */
+.rv{margin:0 0 36px;padding:0 0 0 20px;border-left:3px solid var(--brick)}
+.rv:last-child{margin-bottom:0}
+.stars{font-size:19px;letter-spacing:.14em;color:var(--brick);line-height:1.4;margin:0 0 8px}
+.stars span{color:rgba(42,27,20,.25)}
+.rv p{margin:0;font-size:16px;line-height:1.95}
+.rv cite{display:block;margin-top:10px;font-size:13px;color:var(--ink-soft);font-style:normal;letter-spacing:.06em}
+
+/* ---------- Info ---------- */
+.info{margin:0;border-top:1px solid var(--line-d)}
+.info div{display:grid;grid-template-columns:1fr;gap:2px;padding:16px 0;border-bottom:1px solid var(--line-d)}
+.info dt{font-family:var(--serif);font-weight:700;color:var(--brass-l);letter-spacing:.08em}
+.info dd{margin:0;overflow-wrap:anywhere}
+.info dt{font-size:14px}
+.info a{color:#f4ead6;text-decoration-color:var(--brass);text-underline-offset:4px}
+
+.map{margin:44px 0 0}
+.map-frame{
+  position:relative;width:100%;aspect-ratio:4/3;background:var(--stout-2);
+  border:1px solid var(--line-d);overflow:hidden;
+}
+.map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.btn{
+  display:flex;align-items:center;justify-content:center;
+  min-height:56px;margin-top:14px;padding:14px 22px;
+  background:var(--brick);color:#f8efdc;text-decoration:none;
+  font-family:var(--serif);font-weight:700;font-size:17px;letter-spacing:.1em;
+  border:1px solid var(--brass);
+  -webkit-tap-highlight-color:transparent;
+}
+.btn:active{background:var(--brick-d)}
+
+.contact{margin-top:44px;display:grid;gap:12px}
+.btn-ghost{background:transparent;color:var(--brass-l);border-color:var(--line-d);font-weight:500}
+.btn-ghost:active{background:rgba(196,160,90,.15)}
+
+footer{
+  background:var(--stout);color:#a99677;text-align:center;
+  padding:36px 22px calc(40px + env(safe-area-inset-bottom,0px));
+  font-size:13px;letter-spacing:.08em;border-top:1px solid var(--line-d);line-height:1.9;
+}
+footer .name{font-family:var(--serif);font-size:16px;color:var(--brass-l);display:block;margin-bottom:4px}
+
+/* ---------- Larger screens ---------- */
+@media (min-width:760px){
+  body{font-size:17px}
+  .wrap{padding:0 40px}
+  .hero-in{padding:140px 40px 80px}
+  .sec{padding:116px 0}
+  .points{display:grid;grid-template-columns:repeat(3,1fr);gap:0 36px;border-top:none}
+  .points li{border-bottom:none;border-top:1px solid var(--line-l);padding:26px 0 0}
+  .fig img,.fig-band .frame img{aspect-ratio:16/9}
+  .fig figcaption{padding:14px 40px 0}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .info div{grid-template-columns:8em 1fr;gap:14px}
+  .contact{grid-template-columns:repeat(3,1fr)}
+  .map-frame{aspect-ratio:16/9}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-in > *{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <img src="images/1.jpg" alt="夕暮れの光に浮かぶ、サッポロビール博物館の赤レンガの外観" fetchpriority="high">
+  <div class="hero-in">
+    <p class="hero-kicker">札幌市東区｜日本初のビール専門博物館</p>
+    <h1><span>サッポロビール</span><span>博物館</span></h1>
+    <p class="hero-lead"><span>開拓使麦酒醸造所から続く</span><span>ビールの歴史を、</span><span>1890年建設の赤レンガ建築で辿る。</span></p>
+    <ul class="hero-tags">
+      <li>1987年開館</li>
+      <li>赤レンガ建築</li>
+      <li>ビールの試飲</li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===== Intro ===== -->
+<section class="sec sec-paper" id="about">
+  <div class="wrap">
+    <div class="rule"><i></i><b aria-hidden="true"></b><i></i></div>
+    <h2 class="h2">ビールの歴史と技術、<br>北海道の産業発展をひとつの建物で。</h2>
+    <p class="lead">サッポロビール博物館は、日本で最も古いビールブランドのひとつ、サッポロビールの歴史とビール文化を広く伝えるために生まれた博物館です。</p>
+    <p>開拓使麦酒醸造所に始まる歩みを中心に、明治時代以降のビール醸造技術や、その背景にあった社会の動きまでを体系的に学べます。日本初のビール専門博物館として、高い評価を受けています。</p>
+
+    <ul class="points">
+      <li>
+        <h3>歴史を、順を追って学べる</h3>
+        <p>開拓使麦酒醸造所から現在まで。醸造技術と社会的背景をあわせて知ることができます。</p>
+      </li>
+      <li>
+        <h3>建物そのものが展示</h3>
+        <p>赤レンガ造りの歴史的建築は文化財としての価値を持ち、製麦所時代の製造設備や蒸留機器も見どころです。</p>
+      </li>
+      <li>
+        <h3>2016年のリニューアル</h3>
+        <p>わかりやすい解説と体験型展示を強化し、はじめての方にも楽しめる内容になりました。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Image 2 ===== -->
+<figure class="fig fig-band">
+  <div class="frame">
+    <img src="images/2.jpg" alt="館内に展示された、銅色に輝く巨大なビール煮沸釜" loading="lazy">
+  </div>
+  <figcaption>館内にそびえる、巨大なビール煮沸釜。</figcaption>
+</figure>
+
+<!-- ===== History ===== -->
+<section class="sec sec-dark" id="history">
+  <div class="wrap">
+    <div class="rule"><i></i><b aria-hidden="true"></b><i></i></div>
+    <h2 class="h2">製糖工場から、<br>ビールの博物館へ。</h2>
+    <p>館が建つのは、1890年に建てられた旧札幌製糖会社の赤レンガ工場。時代ごとに役割を変えながら、いまもこの場所に残っています。</p>
+
+    <ol class="tl">
+      <li>
+        <span class="yr">1890年</span>
+        <p class="tx">赤レンガの工場が建設される。当時は製糖工場として使われた。</p>
+      </li>
+      <li>
+        <span class="yr">1903年</span>
+        <p class="tx">札幌麦酒が買収。製麦所として改修される。</p>
+      </li>
+      <li>
+        <span class="yr">1965年</span>
+        <p class="tx">製麦所としての役目を終える。</p>
+      </li>
+      <li>
+        <span class="yr">1987年7月</span>
+        <p class="tx">サッポロビール博物館として開館。</p>
+      </li>
+      <li>
+        <span class="yr">2016年</span>
+        <p class="tx">リニューアル。解説と体験型展示がさらに充実。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Highlights + Image 3 ===== -->
+<section class="sec sec-dark2" id="highlights">
+  <div class="wrap">
+    <div class="rule"><i></i><b aria-hidden="true"></b><i></i></div>
+    <h2 class="h2">見て、味わう。<br>館内のみどころ。</h2>
+    <p>明治期の面影を残すレンガ建築、シンボルの赤い星、そして巨大な煮沸釜。写真に残したくなる場所が、館内外にそろっています。</p>
+    <ul class="hl">
+      <li>
+        <h3>明治の面影を残すレンガ建築</h3>
+        <p>赤レンガの外観と、シンボルの赤い星。歩くたびに表情が変わります。</p>
+      </li>
+      <li>
+        <h3>巨大なビール煮沸釜</h3>
+        <p>国立科学博物館の未来技術遺産に認定された、迫力ある展示です。</p>
+      </li>
+      <li>
+        <h3>スターホールとレストラン</h3>
+        <p>ビールの試飲に加え、北海道グルメも楽しめます。見学のあとの一杯まで、ゆったりお過ごしください。</p>
+      </li>
+    </ul>
+  </div>
+  <figure class="fig" style="margin-top:56px">
+    <img src="images/3.jpg" alt="木のテーブルに置かれた、注ぎたてのビールのグラス" loading="lazy">
+    <figcaption>注ぎ方にもこだわった、ここだけの一杯を。</figcaption>
+  </figure>
+</section>
+
+<!-- ===== Reviews ===== -->
+<section class="sec sec-paper" id="voice">
+  <div class="wrap">
+    <div class="rule"><i></i><b aria-hidden="true"></b><i></i></div>
+    <h2 class="h2">訪れた方のクチコミ</h2>
+
+    <blockquote class="rv" style="margin-left:0;margin-right:0">
+      <p class="stars" aria-label="5点満点中4点">★★★★<span>★</span></p>
+      <p>月曜のためツアーが実施されていなかったため自由見学。1階のホールで特別なビールが飲める。自分は赤星のピルスナーを試飲。注ぎ方にも拘りがあり美味しかった。</p>
+      <cite>来館者のクチコミ</cite>
+    </blockquote>
+
+    <blockquote class="rv" style="margin-left:0;margin-right:0">
+      <p class="stars" aria-label="5点満点中5点">★★★★★</p>
+      <p>札幌ビールの聖地。ゴールデンカムイで知ったため、一度はいってみたいと思っていた。劇中でみた通りの建築物が多くあって嬉しい。中にはビール博物館やジンギスカンが食べられる、ビアホール、ギフトショップと半日以上はいられるボリュームとなっている。ビアホールのビールは格別に美味く、ジンギスカンも臭さがなく食べられる。博物館の展示も素人でもわかりやすい内容となっているので、一見さん向けの施設。ここでしか買えない瓶ビールがギフトショップに売っているので、来た際には忘れずにチェックもしたい。札幌を訪れた際には立ち寄ることを強くお勧めする。</p>
+      <cite>来館者のクチコミ</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ===== Access ===== -->
+<section class="sec sec-dark" id="access">
+  <div class="wrap">
+    <div class="rule"><i></i><b aria-hidden="true"></b><i></i></div>
+    <h2 class="h2">施設情報・アクセス</h2>
+
+    <dl class="info">
+      <div><dt>施設名</dt><dd>サッポロビール博物館</dd></div>
+      <div><dt>住所</dt><dd>北海道札幌市東区北7条東9丁目1-1</dd></div>
+      <div><dt>電話番号</dt><dd><a href="tel:0117481876">011-748-1876</a></dd></div>
+      <div><dt>定休日</dt><dd>12月31日</dd></div>
+      <div><dt>メール</dt><dd><a href="mailto:yebisu.brewery@sapporobeer.co.jp">yebisu.brewery@sapporobeer.co.jp</a></dd></div>
+      <div><dt>公式サイト</dt><dd><a href="https://www.sapporobeer.jp/brewery/s_museum/" target="_blank" rel="noopener">sapporobeer.jp</a></dd></div>
+    </dl>
+
+    <div class="map">
+      <div class="map-frame">
+        <iframe
+          title="サッポロビール博物館の地図"
+          src="https://www.google.com/maps?q=%E3%82%B5%E3%83%83%E3%83%9D%E3%83%AD%E3%83%93%E3%83%BC%E3%83%AB%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E6%9D%B1%E5%8C%BA%E5%8C%977%E6%9D%A1%E6%9D%B19%E4%B8%81%E7%9B%AE1-1&hl=ja&z=16&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E3%82%B5%E3%83%83%E3%83%9D%E3%83%AD%E3%83%93%E3%83%BC%E3%83%AB%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E6%9D%B1%E5%8C%BA%E5%8C%977%E6%9D%A1%E6%9D%B19%E4%B8%81%E7%9B%AE1-1" target="_blank" rel="noopener">Googleマップで地図を開く</a>
+    </div>
+
+    <div class="contact">
+      <a class="btn btn-ghost" href="tel:0117481876">電話で問い合わせる</a>
+      <a class="btn btn-ghost" href="mailto:yebisu.brewery@sapporobeer.co.jp">メールで問い合わせる</a>
+      <a class="btn btn-ghost" href="https://www.sapporobeer.jp/brewery/s_museum/" target="_blank" rel="noopener">公式サイトを見る</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="name">サッポロビール博物館</span>
+  北海道札幌市東区北7条東9丁目1-1
+</footer>
+
+</body>
+</html>
